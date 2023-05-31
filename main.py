@@ -7,9 +7,9 @@ RED = "#e7305b"
 GREEN = "#9bdeac"
 YELLOW = "#f7f5dd"
 FONT_NAME = "Courier"
-WORK_MIN = 1
-SHORT_BREAK_MIN = 1
-LONG_BREAK_MIN = 2
+WORK_MIN = 25
+SHORT_BREAK_MIN = 5
+LONG_BREAK_MIN = 20
 
 # ---------------------------- TIMER RESET ------------------------------- # 
 
@@ -20,7 +20,7 @@ LONG_BREAK_MIN = 2
 # ---------------------------- UI SETUP ------------------------------- #
 
 window = Tk()
-window.title("Pamdoro")
+window.title("Pomodoro")
 window.config(padx=100, pady=50, background=YELLOW)
 REPS = 0
 TICKING = None
@@ -55,7 +55,7 @@ def count_down(count):
         text = ""
         no_reps = math.floor(REPS / 2)
         for _ in range(no_reps):
-            text += "✔\n"
+            text += "✔\n "
         check_mark.config(text=text)
 
 
